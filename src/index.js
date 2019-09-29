@@ -9,6 +9,9 @@ module.exports = function getTimeForEducation(
     knowsProgramming = true,
     config = {family: 4}
     ) {
-      return 0;
+        const masterLevel = 800;
+        const basicLevel = 500;
+        const totalHours = knowsProgramming ? masterLevel : masterLevel + basicLevel;
+        return Math.ceil(totalHours / config[focus]);
   };
   
